@@ -2,34 +2,60 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>InnovAQ - Contact</title>
-  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <h1>InnovAQ</h1>
+<body class="bg-gray-100 text-gray-800">
+  
+  <!-- Header avec le logo et le menu -->
+  <header class="bg-blue-600 text-white p-4 flex items-center justify-between">
+    <a href="index.html">
+        <img src="logo.png" alt="InnovAQ Logo" class="h-16">
+    </a>
+    <nav>
+        <ul class="flex space-x-4">
+            <li><a href="index.html" class="hover:text-gray-300">Accueil</a></li>
+            <li><a href="about.html" class="hover:text-gray-300">À propos</a></li>
+            <li><a href="contact.html" class="hover:text-gray-300">Contact</a></li>
+        </ul>
+    </nav>
   </header>
-
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="about.html">À propos</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <main>
-    <h2>Contactez-nous</h2>
-    <p>
+  
+  <main class="max-w-4xl mx-auto p-6 bg-white shadow-md mt-6 rounded-lg">
+    <h2 class="text-3xl font-bold text-center">Contactez-nous</h2>
+    <p class="text-gray-700 text-center mt-4">
       Pour toute question ou demande d’informations, vous pouvez nous écrire à :
       <strong>contact@innovaq.com</strong>.
     </p>
-    <p>
+    <p class="text-center text-gray-700 mt-2">
       Vous pouvez également nous suivre sur les réseaux sociaux pour rester informé des
       dernières mises à jour et nouveautés.
     </p>
+    
+    <!-- Formulaire de contact -->
+    <form action="#" method="POST" class="mt-6 space-y-4">
+      <div>
+        <label class="block text-gray-700">Nom :</label>
+        <input type="text" class="w-full border p-2 rounded" placeholder="Votre nom" required>
+      </div>
+      <div>
+        <label class="block text-gray-700">Email :</label>
+        <input type="email" class="w-full border p-2 rounded" placeholder="Votre email" required>
+      </div>
+      <div>
+        <label class="block text-gray-700">Message :</label>
+        <textarea class="w-full border p-2 rounded" rows="4" placeholder="Votre message" required></textarea>
+      </div>
+      <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded">Envoyer</button>
+    </form>
   </main>
-
-  <footer>
-    <p>&copy; 2023 InnovAQ. Tous droits réservés.</p>
+  
+  <!-- Pied de Page -->
+  <footer class="bg-blue-600 text-white text-center p-4 mt-6">
+    <img src="logo.png" alt="InnovAQ Logo" class="h-12 mx-auto mb-2">
+    <p>&copy; 2025 InnovAQ - Assurance Qualité dans l'Enseignement Supérieur</p>
   </footer>
+  
 </body>
 </html>
