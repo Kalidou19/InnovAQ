@@ -1,54 +1,20 @@
 /* style.css */
 
-/* Réinitialisation de base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Ajustement du logo */
+.navbar-brand img {
+  margin-right: 10px;
+  border-radius: 50%;
 }
 
-/* Styles globaux */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
-}
-
-/* En-tête (header) */
-header {
-  background-color: #3C5A99;
-  padding: 10px;
-  color: #fff;
-}
-
-/* Barre de navigation */
-nav {
-  background-color: #3C5A99;
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-}
-nav a {
-  color: #fff;
-  margin-right: 20px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* Contenu principal */
-main {
-  max-width: 800px;
-  margin: 40px auto;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 4px;
-}
-
-/* Pied de page */
-footer {
-  background-color: #3C5A99;
-  color: #fff;
+/* Cartes */
+.card {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
   text-align: center;
-  padding: 10px;
-  margin-top: 20px;
+}
+
+/* Conteneur principal */
+.container {
+  max-width: 900px;
 }
