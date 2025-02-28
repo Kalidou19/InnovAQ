@@ -2,35 +2,44 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>InnovAQ - À propos</title>
-  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <h1>InnovAQ</h1>
+<body class="bg-gray-100 text-gray-800">
+  
+  <!-- Header avec le logo et le menu -->
+  <header class="bg-blue-600 text-white p-4 flex items-center justify-between">
+    <a href="index.html">
+        <img src="logo.png" alt="InnovAQ Logo" class="h-16">
+    </a>
+    <nav>
+        <ul class="flex space-x-4">
+            <li><a href="index.html" class="hover:text-gray-300">Accueil</a></li>
+            <li><a href="about.html" class="hover:text-gray-300">À propos</a></li>
+            <li><a href="contact.html" class="hover:text-gray-300">Contact</a></li>
+        </ul>
+    </nav>
   </header>
-
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="about.html">À propos</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <main>
-    <h2>À propos d’InnovAQ</h2>
-    <p>
+  
+  <main class="max-w-4xl mx-auto p-6 bg-white shadow-md mt-6 rounded-lg">
+    <h2 class="text-3xl font-bold text-center">À propos d’InnovAQ</h2>
+    <p class="text-gray-700 mt-4 text-center">
       InnovAQ est une initiative visant à faciliter l’assurance qualité dans l’enseignement supérieur.
       Nous proposons des outils et des ressources pour :
     </p>
-    <ul>
+    <ul class="list-disc list-inside mt-4 text-gray-700">
       <li>Optimiser la gestion des indicateurs qualité</li>
       <li>Améliorer les processus pédagogiques et administratifs</li>
       <li>Renforcer la conformité aux référentiels de l’ANAQ-Sup</li>
     </ul>
   </main>
 
-  <footer>
-    <p>&copy; 2023 InnovAQ. Tous droits réservés.</p>
+  <!-- Pied de Page -->
+  <footer class="bg-blue-600 text-white text-center p-4 mt-6">
+    <img src="logo.png" alt="InnovAQ Logo" class="h-12 mx-auto mb-2">
+    <p>&copy; 2025 InnovAQ - Assurance Qualité dans l'Enseignement Supérieur</p>
   </footer>
+  
 </body>
 </html>
