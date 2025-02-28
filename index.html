@@ -1,70 +1,56 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>InnovAQ - Accueil</title>
-  <!-- Lien vers Bootstrap -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnovAQ - Assurance Qualité</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-
-  <!-- Barre de navigation avec Bootstrap et Logo -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="logo.png" alt="InnovAQ - Quality Assurance" width="80" height="80">
-        InnovAQ
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Contenu principal -->
-  <div class="container mt-5">
-    <h2 class="text-center">Plateforme d'Assurance Qualité</h2>
-    <p class="lead text-center">
-      Bienvenue sur InnovAQ, un système conçu pour faciliter l'assurance qualité
-      dans l'enseignement supérieur au Sénégal.
-    </p>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card p-3">
-          <h4>Auto-évaluation</h4>
-          <p>Évaluez les performances académiques selon les standards de l’ANAQ-Sup.</p>
+<body class="bg-gray-100 text-gray-800">
+    
+    <!-- Header avec le logo et le menu -->
+    <header class="bg-blue-600 text-white p-4 flex items-center justify-between">
+        <img src="logo.png" alt="InnovAQ Logo" class="h-12">
+        <nav>
+            <ul class="flex space-x-4">
+                <li><a href="index.html" class="hover:text-gray-300">Accueil</a></li>
+                <li><a href="about.html" class="hover:text-gray-300">À propos</a></li>
+                <li><a href="contact.html" class="hover:text-gray-300">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Section de Présentation -->
+    <section class="text-center py-12 bg-white shadow-md">
+        <h1 class="text-4xl font-bold">Bienvenue sur InnovAQ</h1>
+        <p class="text-gray-700 mt-4">La plateforme d'Assurance Qualité pour l'enseignement supérieur au Sénégal.</p>
+    </section>
+    
+    <!-- Section Nos Services -->
+    <section class="p-6 text-center">
+        <h2 class="text-3xl font-bold mb-4">Nos Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-4 bg-white shadow-md rounded-lg">
+                <h3 class="text-xl font-semibold">Évaluation de Qualité</h3>
+                <p class="text-gray-600">Analyse et suivi des normes de l’ANAQ-Sup.</p>
+            </div>
+            <div class="p-4 bg-white shadow-md rounded-lg">
+                <h3 class="text-xl font-semibold">Tableaux de Bord</h3>
+                <p class="text-gray-600">Visualisez vos indicateurs de performance.</p>
+            </div>
+            <div class="p-4 bg-white shadow-md rounded-lg">
+                <h3 class="text-xl font-semibold">Assistance & Formations</h3>
+                <p class="text-gray-600">Accompagnement personnalisé pour les établissements.</p>
+            </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card p-3">
-          <h4>Suivi des actions</h4>
-          <p>Gardez un suivi précis des recommandations et améliorations en cours.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card p-3">
-          <h4>Rapports dynamiques</h4>
-          <p>Générez des rapports personnalisés et visualisez les résultats.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Pied de page avec Logo -->
-  <footer class="bg-primary text-white text-center py-3 mt-5">
-    <img src="logo.png" alt="InnovAQ - Quality Assurance" width="60" height="60">
-    <p>&copy; 2023 InnovAQ. Tous droits réservés.</p>
-  </footer>
-
-  <!-- Lien vers Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </section>
+    
+    <!-- Pied de Page -->
+    <footer class="bg-blue-600 text-white text-center p-4 mt-6">
+        <p>&copy; 2025 InnovAQ - Assurance Qualité dans l'Enseignement Supérieur</p>
+    </footer>
+    
 </body>
 </html>
