@@ -1,61 +1,60 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>InnovAQ - Contact</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnovAQ - Qualité dans l'enseignement supérieur</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-100 text-gray-800">
-  
-  <!-- Header avec le logo et le menu -->
-  <header class="bg-blue-600 text-white p-4 flex items-center justify-between">
-    <a href="index.html">
-        <img src="logo.png" alt="InnovAQ Logo" class="h-16">
-    </a>
-    <nav>
-        <ul class="flex space-x-4">
-            <li><a href="index.html" class="hover:text-gray-300">Accueil</a></li>
-            <li><a href="about.html" class="hover:text-gray-300">À propos</a></li>
-            <li><a href="contact.html" class="hover:text-gray-300">Contact</a></li>
-        </ul>
-    </nav>
-  </header>
-  
-  <main class="max-w-4xl mx-auto p-6 bg-white shadow-md mt-6 rounded-lg">
-    <h2 class="text-3xl font-bold text-center">Contactez-nous</h2>
-    <p class="text-gray-700 text-center mt-4">
-      Pour toute question ou demande d’informations, vous pouvez nous écrire à :
-      <strong>contact@innovaq.com</strong>.
-    </p>
-    <p class="text-center text-gray-700 mt-2">
-      Vous pouvez également nous suivre sur les réseaux sociaux pour rester informé des
-      dernières mises à jour et nouveautés.
-    </p>
-    
-    <!-- Formulaire de contact -->
-    <form action="#" method="POST" class="mt-6 space-y-4">
-      <div>
-        <label class="block text-gray-700">Nom :</label>
-        <input type="text" class="w-full border p-2 rounded" placeholder="Votre nom" required>
-      </div>
-      <div>
-        <label class="block text-gray-700">Email :</label>
-        <input type="email" class="w-full border p-2 rounded" placeholder="Votre email" required>
-      </div>
-      <div>
-        <label class="block text-gray-700">Message :</label>
-        <textarea class="w-full border p-2 rounded" rows="4" placeholder="Votre message" required></textarea>
-      </div>
-      <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded">Envoyer</button>
-    </form>
-  </main>
-  
-  <!-- Pied de Page -->
-  <footer class="bg-blue-600 text-white text-center p-4 mt-6">
-    <img src="logo.png" alt="InnovAQ Logo" class="h-12 mx-auto mb-2">
-    <p>&copy; 2025 InnovAQ - Assurance Qualité dans l'Enseignement Supérieur</p>
-  </footer>
-  
+<body>
+
+    <!-- Header avec Logo -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="InnovAQ Logo">
+        </div>
+        <h1>InnovAQ</h1>
+        <p>La qualité au cœur de l'enseignement supérieur</p>
+    </header>
+
+    <!-- Section Présentation -->
+    <section class="intro">
+        <h2>À propos d'InnovAQ</h2>
+        <p>InnovAQ est une plateforme innovante dédiée à l’amélioration de l’assurance qualité dans l'enseignement supérieur au Sénégal. 
+           Nous accompagnons les établissements dans leur conformité aux exigences de l’ANAQ-Sup.</p>
+    </section>
+
+    <!-- Section Services -->
+    <section class="services">
+        <h2>Nos Activités</h2>
+        <div class="service-container">
+            <div class="service-box">
+                <h3>🔍 Évaluation Qualité</h3>
+                <p>Nous analysons et évaluons la qualité des établissements pour une amélioration continue.</p>
+            </div>
+            <div class="service-box">
+                <h3>📊 Tableaux de Bord</h3>
+                <p>Outils de suivi et reporting pour assurer la conformité avec l’ANAQ-Sup.</p>
+            </div>
+            <div class="service-box">
+                <h3>📚 Formation & Accompagnement</h3>
+                <p>Des formations pour sensibiliser les acteurs académiques aux normes qualité.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section class="contact">
+        <h2>Contactez-nous</h2>
+        <p>Besoin d’accompagnement en assurance qualité ?</p>
+        <a href="contact.html" class="button">Nous Contacter</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 InnovAQ - Tous droits réservés.</p>
+    </footer>
+
 </body>
 </html>
