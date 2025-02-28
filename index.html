@@ -3,58 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InnovAQ - Qualité dans l'enseignement supérieur</title>
+    <title>InnovAQ - Accueil</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-
-    <!-- Header avec Logo -->
-    <header>
-        <div class="logo">
-            <img src="logo.png" alt="InnovAQ Logo">
-        </div>
-        <h1>InnovAQ</h1>
-        <p>La qualité au cœur de l'enseignement supérieur</p>
+<body class="bg-gray-100 text-gray-900">
+    
+    <!-- Header -->
+    <header class="bg-blue-900 text-white p-4 flex justify-between items-center">
+        <img src="logo.png" alt="InnovAQ Logo" class="h-12">
+        <nav>
+            <ul class="flex space-x-4">
+                <li><a href="index.html" class="hover:text-yellow-400">Accueil</a></li>
+                <li><a href="about.html" class="hover:text-yellow-400">À propos</a></li>
+                <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <!-- Section Présentation -->
-    <section class="intro">
-        <h2>À propos d'InnovAQ</h2>
-        <p>InnovAQ est une plateforme innovante dédiée à l’amélioration de l’assurance qualité dans l'enseignement supérieur au Sénégal. 
-           Nous accompagnons les établissements dans leur conformité aux exigences de l’ANAQ-Sup.</p>
+    
+    <!-- Section d'introduction -->
+    <section class="text-center py-16 px-8">
+        <h1 class="text-4xl font-bold text-blue-900">Bienvenue sur InnovAQ</h1>
+        <p class="mt-4 text-lg text-gray-700">Une plateforme dédiée à l’assurance qualité dans l’enseignement supérieur au Sénégal.</p>
     </section>
-
-    <!-- Section Services -->
-    <section class="services">
-        <h2>Nos Activités</h2>
-        <div class="service-container">
-            <div class="service-box">
-                <h3>🔍 Évaluation Qualité</h3>
-                <p>Nous analysons et évaluons la qualité des établissements pour une amélioration continue.</p>
-            </div>
-            <div class="service-box">
-                <h3>📊 Tableaux de Bord</h3>
-                <p>Outils de suivi et reporting pour assurer la conformité avec l’ANAQ-Sup.</p>
-            </div>
-            <div class="service-box">
-                <h3>📚 Formation & Accompagnement</h3>
-                <p>Des formations pour sensibiliser les acteurs académiques aux normes qualité.</p>
-            </div>
+    
+    <!-- Présentation des activités -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-8 px-8 py-12">
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+            <h2 class="text-xl font-semibold text-blue-800">Évaluation Qualité</h2>
+            <p class="text-gray-600">Conformité avec les standards de l'ANAQ-Sup.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+            <h2 class="text-xl font-semibold text-blue-800">Suivi des Accréditations</h2>
+            <p class="text-gray-600">Gestion des processus d'accréditation.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+            <h2 class="text-xl font-semibold text-blue-800">Tableaux de Bord</h2>
+            <p class="text-gray-600">Analyse des performances et reporting.</p>
         </div>
     </section>
-
-    <!-- Section Contact -->
-    <section class="contact">
-        <h2>Contactez-nous</h2>
-        <p>Besoin d’accompagnement en assurance qualité ?</p>
-        <a href="contact.html" class="button">Nous Contacter</a>
-    </section>
-
+    
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 InnovAQ - Tous droits réservés.</p>
+    <footer class="bg-blue-900 text-white text-center py-4">
+        <p>&copy; 2025 InnovAQ - Assurance Qualité dans l'Enseignement Supérieur</p>
     </footer>
-
 </body>
 </html>
