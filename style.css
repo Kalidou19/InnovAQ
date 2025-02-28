@@ -1,20 +1,69 @@
-/* style.css */
-
-/* Ajustement du logo */
-.navbar-brand img {
-  margin-right: 10px;
-  border-radius: 50%;
+/* Styles Généraux */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #F4F6F9;
+    color: #333;
 }
 
-/* Cartes */
-.card {
-  background-color: #f8f9fa;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  text-align: center;
+/* En-tête */
+header {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
 }
 
-/* Conteneur principal */
-.container {
-  max-width: 900px;
+.logo img {
+    width: 120px;
+}
+
+/* Sections */
+section {
+    width: 80%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #003366;
+}
+
+/* Services */
+.service-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.service-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+/* Bouton */
+.button {
+    background: #FFD700;
+    color: #003366;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #FFC107;
+}
+
+/* Footer */
+footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
 }
