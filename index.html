@@ -3,49 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InnovAQ - Accueil</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>InnovAQ - Assurance Qualité</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 text-gray-900">
+<body class="bg-gray-100">
     
     <!-- Header -->
-    <header class="bg-blue-900 text-white p-4 flex justify-between items-center">
-        <img src="logo.png" alt="InnovAQ Logo" class="h-12">
+    <header class="bg-blue-900 text-white p-5 flex justify-between items-center">
+        <div class="flex items-center">
+            <img src="logo.png" alt="InnovAQ Logo" class="h-12 mr-3">
+            <h1 class="text-2xl font-bold">InnovAQ</h1>
+        </div>
         <nav>
             <ul class="flex space-x-4">
-                <li><a href="index.html" class="hover:text-yellow-400">Accueil</a></li>
-                <li><a href="about.html" class="hover:text-yellow-400">À propos</a></li>
-                <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
+                <li><a href="#about" class="hover:underline">À propos</a></li>
+                <li><a href="#features" class="hover:underline">Fonctionnalités</a></li>
+                <li><a href="#contact" class="hover:underline">Contact</a></li>
             </ul>
         </nav>
     </header>
     
-    <!-- Section d'introduction -->
-    <section class="text-center py-16 px-8">
-        <h1 class="text-4xl font-bold text-blue-900">Bienvenue sur InnovAQ</h1>
-        <p class="mt-4 text-lg text-gray-700">Une plateforme dédiée à l’assurance qualité dans l’enseignement supérieur au Sénégal.</p>
+    <!-- Hero Section -->
+    <section class="text-center py-20 bg-blue-800 text-white">
+        <h2 class="text-4xl font-bold">Une solution complète pour l'assurance qualité</h2>
+        <p class="mt-4 text-lg">Centralisez, évaluez et optimisez la qualité académique dans votre établissement</p>
+        <a href="#features" class="mt-6 inline-block bg-white text-blue-900 py-2 px-4 rounded-lg shadow-md hover:bg-gray-200">Découvrir</a>
     </section>
     
-    <!-- Présentation des activités -->
-    <section class="grid grid-cols-1 md:grid-cols-3 gap-8 px-8 py-12">
-        <div class="bg-white p-6 rounded-lg shadow-md text-center">
-            <h2 class="text-xl font-semibold text-blue-800">Évaluation Qualité</h2>
-            <p class="text-gray-600">Conformité avec les standards de l'ANAQ-Sup.</p>
+    <!-- Features Section -->
+    <section id="features" class="py-20 px-10">
+        <h2 class="text-3xl font-bold text-center mb-8">Fonctionnalités Clés</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 shadow-md rounded-lg text-center">
+                <h3 class="text-xl font-semibold">Accréditations et conformité</h3>
+                <p class="mt-2">Suivi des référentiels de l'ANAQ-Sup et rapports automatisés.</p>
+            </div>
+            <div class="bg-white p-6 shadow-md rounded-lg text-center">
+                <h3 class="text-xl font-semibold">Évaluation des formations</h3>
+                <p class="mt-2">Collecte et analyse des feedbacks des étudiants et enseignants.</p>
+            </div>
+            <div class="bg-white p-6 shadow-md rounded-lg text-center">
+                <h3 class="text-xl font-semibold">Suivi des indicateurs</h3>
+                <p class="mt-2">Tableaux de bord et KPI pour la gestion de la qualité.</p>
+            </div>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-md text-center">
-            <h2 class="text-xl font-semibold text-blue-800">Suivi des Accréditations</h2>
-            <p class="text-gray-600">Gestion des processus d'accréditation.</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md text-center">
-            <h2 class="text-xl font-semibold text-blue-800">Tableaux de Bord</h2>
-            <p class="text-gray-600">Analyse des performances et reporting.</p>
-        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gray-200 py-20 px-10 text-center">
+        <h2 class="text-3xl font-bold mb-4">Contactez-nous</h2>
+        <p class="mb-6">Besoin d’informations ? Contactez notre équipe.</p>
+        <a href="mailto:contact@innovaq.com" class="bg-blue-900 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Envoyer un e-mail</a>
     </section>
     
     <!-- Footer -->
-    <footer class="bg-blue-900 text-white text-center py-4">
-        <p>&copy; 2025 InnovAQ - Assurance Qualité dans l'Enseignement Supérieur</p>
+    <footer class="bg-blue-900 text-white text-center py-5">
+        <p>&copy; 2025 InnovAQ - Tous droits réservés.</p>
     </footer>
+    
 </body>
 </html>
