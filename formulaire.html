@@ -5,61 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Évaluation des Formations - InnovAQ</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            background-image: url('https://source.unsplash.com/1600x900/?AI,education,university');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
-        .form-container {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-    </style>
 </head>
-<body class="flex items-center justify-center min-h-screen">
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
-    <div class="form-container max-w-lg w-full">
+    <div class="bg-white shadow-lg rounded-lg p-6 max-w-lg w-full">
         <h2 class="text-2xl font-bold text-center text-blue-900">Évaluation de la Formation</h2>
         <p class="text-center text-gray-600 mb-4">Merci de prendre quelques instants pour donner votre avis.</p>
 
         <form action="#" method="POST" class="space-y-4">
-            <!-- Informations générales -->
+            <!-- Nom du cours -->
             <div>
                 <label class="block text-sm font-semibold text-gray-700">Nom du cours :</label>
                 <input type="text" name="course_name" class="w-full border border-gray-300 p-3 rounded-lg focus:outline-blue-500 focus:ring-2 focus:ring-blue-500" required>
             </div>
+
+            <!-- Enseignant -->
             <div>
                 <label class="block text-sm font-semibold text-gray-700">Nom de l'enseignant :</label>
                 <input type="text" name="teacher" class="w-full border border-gray-300 p-3 rounded-lg focus:outline-blue-500 focus:ring-2 focus:ring-blue-500" required>
             </div>
 
-            <!-- Organisation matérielle du cours -->
-            <h3 class="text-lg font-semibold text-gray-700">Organisation matérielle du cours</h3>
+            <!-- Qualité du contenu pédagogique -->
             <div>
-                <label class="block text-sm font-semibold text-gray-700">Programmation du cours :</label>
-                <select name="course_schedule" class="w-full border border-gray-300 p-3 rounded-lg bg-gray-100 focus:outline-blue-500 focus:ring-2 focus:ring-blue-500">
-                    <option>1 - Pas du tout satisfaisant</option>
-                    <option>2 - Peu satisfaisant</option>
-                    <option>3 - Moyennement satisfaisant</option>
-                    <option>4 - Satisfaisant</option>
-                    <option>5 - Très satisfaisant</option>
+                <label class="block text-sm font-semibold text-gray-700">Qualité du contenu pédagogique :</label>
+                <select name="content_quality" class="w-full border border-gray-300 p-3 rounded-lg bg-gray-100 focus:outline-blue-500 focus:ring-2 focus:ring-blue-500">
+                    <option>Excellent</option>
+                    <option>Bon</option>
+                    <option>Moyen</option>
+                    <option>Insuffisant</option>
                 </select>
             </div>
 
-            <!-- Avis & Commentaires -->
-            <h3 class="text-lg font-semibold text-gray-700">Avis & Commentaires</h3>
+            <!-- Clarté des explications -->
             <div>
-                <label class="block text-sm font-semibold text-gray-700">Ce que vous avez le plus apprécié :</label>
-                <textarea name="positive_feedback" class="w-full border border-gray-300 p-3 rounded-lg focus:outline-blue-500 focus:ring-2 focus:ring-blue-500"></textarea>
+                <label class="block text-sm font-semibold text-gray-700">Clarté des explications :</label>
+                <select name="clarity" class="w-full border border-gray-300 p-3 rounded-lg bg-gray-100 focus:outline-blue-500 focus:ring-2 focus:ring-blue-500">
+                    <option>Excellent</option>
+                    <option>Bon</option>
+                    <option>Moyen</option>
+                    <option>Insuffisant</option>
+                </select>
             </div>
+
+            <!-- Satisfaction globale -->
             <div>
-                <label class="block text-sm font-semibold text-gray-700">Ce que vous avez le moins apprécié :</label>
-                <textarea name="negative_feedback" class="w-full border border-gray-300 p-3 rounded-lg focus:outline-blue-500 focus:ring-2 focus:ring-blue-500"></textarea>
+                <label class="block text-sm font-semibold text-gray-700">Satisfaction globale :</label>
+                <select name="satisfaction" class="w-full border border-gray-300 p-3 rounded-lg bg-gray-100 focus:outline-blue-500 focus:ring-2 focus:ring-blue-500">
+                    <option>Très satisfait</option>
+                    <option>Satisfait</option>
+                    <option>Peu satisfait</option>
+                    <option>Pas du tout satisfait</option>
+                </select>
             </div>
 
             <!-- Bouton de soumission -->
