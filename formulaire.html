@@ -3,48 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InnovAQ - Accueil</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Évaluation des Formations - InnovAQ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
-    <!-- HEADER -->
-    <header class="header">
-        <img src="logo.png" alt="InnovAQ Logo" class="logo">
-        <h1>InnovAQ - Assurance Qualité</h1>
-        <nav class="nav">
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="about.html">À propos</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="formulaire.html">Évaluation</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="bg-white shadow-lg rounded-lg p-6 max-w-lg w-full">
+        <h2 class="text-2xl font-bold text-center text-blue-900">Évaluation de la Formation</h2>
+        <p class="text-center text-gray-600 mb-4">Merci de prendre quelques instants pour donner votre avis.</p>
 
-    <!-- SECTION NOS SERVICES -->
-    <section class="services">
-        <h2>Nos Services</h2>
-        <div class="service-container">
-            <div class="service-box">
-                <h3>Gestion des Accréditations</h3>
-                <p>Suivi des référentiels d’accréditation et génération automatique des rapports.</p>
+        <form action="#" method="POST" class="space-y-4">
+            <!-- Informations générales -->
+            <div>
+                <label class="block text-sm font-semibold text-gray-700">Nom du cours :</label>
+                <input type="text" name="course_name" class="w-full border border-gray-300 p-3 rounded-lg focus:outline-blue-500 focus:ring-2 focus:ring-blue-500" required>
             </div>
-            <div class="service-box">
-                <h3>Évaluation des Formations</h3>
-                <p>Collecte et analyse des retours des étudiants et enseignants pour l’amélioration continue.</p>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700">Nom de l'enseignant :</label>
+                <input type="text" name="teacher" class="w-full border border-gray-300 p-3 rounded-lg focus:outline-blue-500 focus:ring-2 focus:ring-blue-500" required>
             </div>
-            <div class="service-box">
-                <h3>Suivi des Indicateurs</h3>
-                <p>Tableaux de bord interactifs pour piloter la qualité académique.</p>
-            </div>
-        </div>
-    </section>
 
-    <footer>
-        <p>&copy; 2025 InnovAQ - Tous droits réservés</p>
-    </footer>
+            <!-- Organisation matérielle du cours -->
+            <h3 class="text-lg font-semibold text-gray-700">Organisation matérielle du cours</h3>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700">Programmation du cours :</label>
+                <select name="course_schedule" class="w-full border border-gray-300 p-3 rounded-lg bg-gray-100 focus:outline-blue-500 focus:ring-2 focus:ring-blue-500">
+                    <option>1 - Pas du tout satisfaisant</option>
+                    <option>2 - Peu satisfaisant</option>
+                    <option>3 - Moyennement satisfaisant</option>
+                    <option>4 - Satisfaisant</option>
+                    <option>5 - Très satisfaisant</option>
+                </select>
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700">Organisation logistique (salle, matériel) :</label>
+                <select name="logistics" class="w-full border border-gray-300 p-3 rounded-lg bg-gray-100 focus:outline-blue-500 focus:ring-2 focus:ring-blue-500">
+                    <option>1 - Pas du tout satisfaisant</option>
+                    <option>2 - Peu satisfaisant</option>
+                    <option>3 - Moyennement satisfaisant</option>
+                    <option>4 - Satisfaisant</option>
+                    <option>5 - Très satisfaisant</option>
+                </select>
+            </div>
+
+            <!-- Animation du cours -->
+            <h3 class="text-lg font-semibold text-gray-700">Animation du cours</h3>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700">Méthodes pédagogiques utilisées :</label>
+                <select name="teaching_methods" class="w-full border border-gray-300 p-3 rounded-lg bg-gray-100 focus:outline-blue-500 focus:ring-2 focus:ring-blue-500">
+                    <option>1 - Pas du tout satisfaisant</option>
+                    <option>2 - Peu satisfaisant</option>
+                    <option>3 - Moyennement satisfaisant</option>
+                    <option>4 - Satisfaisant</option>
+                    <option>5 - Très satisfaisant</option>
+                </select>
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700">Qualité des supports de cours :</label>
+                <select name="course_materials" class="w-full border border-gray-300 p-3 rounded-lg bg-gray-100 focus:outline-blue-500 focus:ring-2 focus:ring-blue-500">
+                    <option>1 - Pas du tout satisfaisant</option>
+                    <option>2 - Peu satisfaisant</option>
+                    <option>3 - Moyennement satisfaisant</option>
+                    <option>4 - Satisfaisant</option>
+                    <option>5 - Très satisfaisant</option>
+                </select>
+            </div>
+
+            <!-- Contenu des enseignements -->
+            <h3 class="text-lg font-semibold text-gray-700">Contenu des enseignements</h3>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700">Objectifs du cours clairement énoncés :</label>
+                <select name="course_objectives" class="w-full border border-gray-300 p-3 rounded-lg bg-gray-100 focus:outline-blue-500 focus:ring-2 focus:ring-blue-500">
+                    <option>1 - Pas du tout satisfaisant</option>
+                    <option>2 - Peu satisfaisant</option>
+                    <option>3 - Moyennement satisfaisant</option>
+                    <option>4 - Satisfaisant</option>
+                    <option>5 - Très satisfaisant</option>
+                </select>
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700">Contenu en adéquation avec les objectifs :</label>
+                <select name="content_relevance" class="w-full border border-gray-300 p-3 rounded-lg bg-gray-100 focus:outline-blue-500 focus:ring-2 focus:ring-blue-500">
+                    <option>1 - Pas du tout satisfaisant</option>
+                    <option>2 - Peu satisfaisant</option>
+                    <option>3 - Moyennement satisfaisant</option>
+                    <option>4 - Satisfaisant</option>
+                    <option>5 - Très satisfaisant</option>
+                </select>
+            </div>
+
+            <!-- Avis & Commentaires -->
+            <h3 class="text-lg font-semibold text-gray-700">Avis & Commentaires</h3>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700">Ce que vous avez le plus apprécié :</label>
+                <textarea name="positive_feedback" class="w-full border border-gray-300 p-3 rounded-lg focus:outline-blue-500 focus:ring-2 focus:ring-blue-500"></textarea>
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700">Ce que vous avez le moins apprécié :</label>
+                <textarea name="negative_feedback" class="w-full border border-gray-300 p-3 rounded-lg focus:outline-blue-500 focus:ring-2 focus:ring-blue-500"></textarea>
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700">Suggestions d’amélioration :</label>
+                <textarea name="suggestions" class="w-full border border-gray-300 p-3 rounded-lg focus:outline-blue-500 focus:ring-2 focus:ring-blue-500"></textarea>
+            </div>
+
+            <!-- Bouton de soumission -->
+            <div class="text-center">
+                <button type="submit" class="bg-blue-900 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all duration-300">
+                    Soumettre l'évaluation
+                </button>
+            </div>
+        </form>
+    </div>
 
 </body>
 </html>
