@@ -3,69 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Évaluation des Formations - InnovAQ</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>InnovAQ - Accueil</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+<body>
 
-    <div class="bg-white shadow-lg rounded-lg p-6 max-w-lg w-full">
-        <h2 class="text-2xl font-bold text-center text-blue-900">Évaluation de la Formation</h2>
-        <p class="text-center text-gray-600 mb-4">Merci de prendre quelques instants pour donner votre avis.</p>
+    <!-- HEADER -->
+    <header class="header">
+        <img src="logo.png" alt="InnovAQ Logo" class="logo">
+        <h1>InnovAQ - Assurance Qualité</h1>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="formulaire.html">Évaluation</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <form action="#" method="POST" class="space-y-4">
-            <!-- Nom du cours -->
-            <div>
-                <label class="block text-sm font-semibold text-gray-700">Nom du cours :</label>
-                <input type="text" name="course_name" class="w-full border border-gray-300 p-3 rounded-lg focus:outline-blue-500 focus:ring-2 focus:ring-blue-500" required>
+    <!-- SECTION NOS SERVICES -->
+    <section class="services">
+        <h2>Nos Services</h2>
+        <div class="service-container">
+            <div class="service-box">
+                <h3>Gestion des Accréditations</h3>
+                <p>Suivi des référentiels d’accréditation et génération automatique des rapports.</p>
             </div>
-
-            <!-- Enseignant -->
-            <div>
-                <label class="block text-sm font-semibold text-gray-700">Nom de l'enseignant :</label>
-                <input type="text" name="teacher" class="w-full border border-gray-300 p-3 rounded-lg focus:outline-blue-500 focus:ring-2 focus:ring-blue-500" required>
+            <div class="service-box">
+                <h3>Évaluation des Formations</h3>
+                <p>Collecte et analyse des retours des étudiants et enseignants pour l’amélioration continue.</p>
             </div>
-
-            <!-- Qualité du contenu pédagogique -->
-            <div>
-                <label class="block text-sm font-semibold text-gray-700">Qualité du contenu pédagogique :</label>
-                <select name="content_quality" class="w-full border border-gray-300 p-3 rounded-lg bg-gray-100 focus:outline-blue-500 focus:ring-2 focus:ring-blue-500">
-                    <option>Excellent</option>
-                    <option>Bon</option>
-                    <option>Moyen</option>
-                    <option>Insuffisant</option>
-                </select>
+            <div class="service-box">
+                <h3>Suivi des Indicateurs</h3>
+                <p>Tableaux de bord interactifs pour piloter la qualité académique.</p>
             </div>
+        </div>
+    </section>
 
-            <!-- Clarté des explications -->
-            <div>
-                <label class="block text-sm font-semibold text-gray-700">Clarté des explications :</label>
-                <select name="clarity" class="w-full border border-gray-300 p-3 rounded-lg bg-gray-100 focus:outline-blue-500 focus:ring-2 focus:ring-blue-500">
-                    <option>Excellent</option>
-                    <option>Bon</option>
-                    <option>Moyen</option>
-                    <option>Insuffisant</option>
-                </select>
-            </div>
-
-            <!-- Satisfaction globale -->
-            <div>
-                <label class="block text-sm font-semibold text-gray-700">Satisfaction globale :</label>
-                <select name="satisfaction" class="w-full border border-gray-300 p-3 rounded-lg bg-gray-100 focus:outline-blue-500 focus:ring-2 focus:ring-blue-500">
-                    <option>Très satisfait</option>
-                    <option>Satisfait</option>
-                    <option>Peu satisfait</option>
-                    <option>Pas du tout satisfait</option>
-                </select>
-            </div>
-
-            <!-- Bouton de soumission -->
-            <div class="text-center">
-                <button type="submit" class="bg-blue-900 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all duration-300">
-                    Soumettre l'évaluation
-                </button>
-            </div>
-        </form>
-    </div>
+    <footer>
+        <p>&copy; 2025 InnovAQ - Tous droits réservés</p>
+    </footer>
 
 </body>
 </html>
