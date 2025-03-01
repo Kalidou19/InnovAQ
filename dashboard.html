@@ -3,85 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tableau de Bord</title>
+    <title>Tableau de Bord - InnovAQ</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100">
-    <div class="flex">
-        <!-- Menu de navigation -->
-        <nav class="w-64 bg-blue-900 text-white min-h-screen p-4">
-            <h1 class="text-xl font-bold mb-4">InnovAQ</h1>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <img src="logo.png" alt="InnovAQ Logo" class="logo">
+        <h1>InnovAQ - Tableau de Bord</h1>
+        <nav class="nav">
             <ul>
-                <li class="mb-2"><a href="#" class="block p-2 hover:bg-blue-700">Dashboard</a></li>
-                <li class="mb-2"><a href="#" class="block p-2 hover:bg-blue-700">Accréditations</a></li>
-                <li class="mb-2"><a href="#" class="block p-2 hover:bg-blue-700">Qualité académique</a></li>
-                <li class="mb-2"><a href="#" class="block p-2 hover:bg-blue-700">Plans d’action</a></li>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="formulaire.html">Évaluation</a></li>
+                <li><a href="dashboard.html" class="active">Tableau de Bord</a></li>
             </ul>
         </nav>
+    </header>
+
+    <!-- SECTION TABLEAU DE BORD -->
+    <section class="dashboard">
+        <h2>Statistiques de l'Assurance Qualité</h2>
         
-        <!-- Contenu principal -->
-        <main class="flex-1 p-6">
-            <h2 class="text-2xl font-semibold mb-6">Tableau de Bord</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Graphique suivi des accréditations -->
-                <div class="bg-white p-4 rounded-lg shadow">
-                    <h3 class="text-lg font-semibold mb-2">Suivi des Accréditations</h3>
-                    <canvas id="chartAccreditations"></canvas>
-                </div>
-                
-                <!-- Graphique évolution qualité académique -->
-                <div class="bg-white p-4 rounded-lg shadow">
-                    <h3 class="text-lg font-semibold mb-2">Évolution de la Qualité Académique</h3>
-                    <canvas id="chartQualite"></canvas>
-                </div>
-                
-                <!-- Indicateur progrès plans d’action -->
-                <div class="bg-white p-4 rounded-lg shadow">
-                    <h3 class="text-lg font-semibold mb-2">Progrès des Plans d’Action</h3>
-                    <canvas id="chartPlans"></canvas>
-                </div>
+        <div class="charts-container">
+            <div class="chart-box">
+                <h3>Répartition des Accréditations</h3>
+                <canvas id="accreditationChart"></canvas>
             </div>
-        </main>
-    </div>
+            <div class="chart-box">
+                <h3>Évolution des Indicateurs</h3>
+                <canvas id="indicatorsChart"></canvas>
+            </div>
+            <div class="chart-box">
+                <h3>Progression des Plans d'Action</h3>
+                <canvas id="plansChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 InnovAQ - Tous droits réservés</p>
+    </footer>
 
     <script>
-        // Données factices pour les graphiques
-        const ctxAccreditations = document.getElementById('chartAccreditations').getContext('2d');
-        new Chart(ctxAccreditations, {
-            type: 'bar',
+        // Graphique des accréditations
+        const accreditationCtx = document.getElementById('accreditationChart').getContext('2d');
+        new Chart(accreditationCtx, {
+            type: 'pie',
             data: {
-                labels: ['2021', '2022', '2023', '2024'],
+                labels: ['Accrédité', 'En cours', 'Non accrédité'],
                 datasets: [{
-                    label: 'Accréditations obtenues',
-                    data: [5, 10, 15, 20],
-                    backgroundColor: 'rgba(54, 162, 235, 0.5)'
+                    data: [50, 30, 20],
+                    backgroundColor: ['#4CAF50', '#FFC107', '#F44336']
                 }]
             }
         });
-        
-        const ctxQualite = document.getElementById('chartQualite').getContext('2d');
-        new Chart(ctxQualite, {
+
+        // Graphique des indicateurs
+        const indicatorsCtx = document.getElementById('indicatorsChart').getContext('2d');
+        new Chart(indicatorsCtx, {
             type: 'line',
             data: {
-                labels: ['2021', '2022', '2023', '2024'],
+                labels: ['Jan', 'Fév', 'Mar', 'Avr', 'Mai'],
                 datasets: [{
-                    label: 'Score Qualité',
-                    data: [70, 75, 80, 85],
-                    borderColor: 'rgba(255, 99, 132, 1)',
+                    label: 'Performance',
+                    data: [65, 75, 70, 80, 90],
+                    borderColor: '#2196F3',
                     fill: false
                 }]
             }
         });
-        
-        const ctxPlans = document.getElementById('chartPlans').getContext('2d');
-        new Chart(ctxPlans, {
-            type: 'doughnut',
+
+        // Graphique des plans d'action
+        const plansCtx = document.getElementById('plansChart').getContext('2d');
+        new Chart(plansCtx, {
+            type: 'bar',
             data: {
-                labels: ['Complété', 'En cours', 'À faire'],
+                labels: ['Phase 1', 'Phase 2', 'Phase 3', 'Phase 4'],
                 datasets: [{
-                    data: [50, 30, 20],
-                    backgroundColor: ['#4CAF50', '#FF9800', '#F44336']
+                    label: 'Progression',
+                    data: [20, 40, 60, 80],
+                    backgroundColor: '#FF5722'
                 }]
             }
         });
