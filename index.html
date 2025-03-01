@@ -3,63 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InnovAQ - Assurance Qualité</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>InnovAQ - Accueil</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-100">
-    
-    <!-- Header -->
-    <header class="bg-blue-900 text-white p-5 flex justify-between items-center">
-        <div class="flex items-center">
-            <img src="logo.png" alt="InnovAQ Logo" class="h-12 mr-3">
-            <h1 class="text-2xl font-bold">InnovAQ</h1>
-        </div>
-        <nav>
-            <ul class="flex space-x-4">
-                <li><a href="#about" class="hover:underline">À propos</a></li>
-                <li><a href="#features" class="hover:underline">Fonctionnalités</a></li>
-                <li><a href="#contact" class="hover:underline">Contact</a></li>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <img src="logo.png" alt="InnovAQ Logo" class="logo">
+        <h1>InnovAQ - Assurance Qualité</h1>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    
-    <!-- Hero Section -->
-    <section class="text-center py-20 bg-blue-800 text-white">
-        <h2 class="text-4xl font-bold">Une solution complète pour l'assurance qualité</h2>
-        <p class="mt-4 text-lg">Centralisez, évaluez et optimisez la qualité académique dans votre établissement</p>
-        <a href="#features" class="mt-6 inline-block bg-white text-blue-900 py-2 px-4 rounded-lg shadow-md hover:bg-gray-200">Découvrir</a>
-    </section>
-    
-    <!-- Features Section -->
-    <section id="features" class="py-20 px-10">
-        <h2 class="text-3xl font-bold text-center mb-8">Fonctionnalités Clés</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 shadow-md rounded-lg text-center">
-                <h3 class="text-xl font-semibold">Accréditations et conformité</h3>
-                <p class="mt-2">Suivi des référentiels de l'ANAQ-Sup et rapports automatisés.</p>
+
+    <!-- SECTION NOS SERVICES -->
+    <section class="services">
+        <h2>Nos Services</h2>
+        <div class="service-container">
+            <div class="service-box">
+                <h3>Gestion des Accréditations</h3>
+                <p>Suivi des référentiels d’accréditation et génération automatique des rapports.</p>
             </div>
-            <div class="bg-white p-6 shadow-md rounded-lg text-center">
-                <h3 class="text-xl font-semibold">Évaluation des formations</h3>
-                <p class="mt-2">Collecte et analyse des feedbacks des étudiants et enseignants.</p>
+            <div class="service-box">
+                <h3>Évaluation des Formations</h3>
+                <p>Collecte et analyse des retours des étudiants et enseignants pour l’amélioration continue.</p>
             </div>
-            <div class="bg-white p-6 shadow-md rounded-lg text-center">
-                <h3 class="text-xl font-semibold">Suivi des indicateurs</h3>
-                <p class="mt-2">Tableaux de bord et KPI pour la gestion de la qualité.</p>
+            <div class="service-box">
+                <h3>Suivi des Indicateurs</h3>
+                <p>Tableaux de bord interactifs pour piloter la qualité académique.</p>
             </div>
         </div>
     </section>
-    
-    <!-- Contact Section -->
-    <section id="contact" class="bg-gray-200 py-20 px-10 text-center">
-        <h2 class="text-3xl font-bold mb-4">Contactez-nous</h2>
-        <p class="mb-6">Besoin d’informations ? Contactez notre équipe.</p>
-        <a href="mailto:contact@innovaq.com" class="bg-blue-900 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Envoyer un e-mail</a>
-    </section>
-    
-    <!-- Footer -->
-    <footer class="bg-blue-900 text-white text-center py-5">
-        <p>&copy; 2025 InnovAQ - Tous droits réservés.</p>
+
+    <footer>
+        <p>&copy; 2025 InnovAQ - Tous droits réservés</p>
     </footer>
-    
+
 </body>
 </html>
