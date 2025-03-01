@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Évaluation des Formations - InnovAQ</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-image: url('https://source.unsplash.com/1600x900/?education,university');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
-    <div class="bg-white shadow-lg rounded-lg p-6 max-w-lg w-full">
+    <div class="bg-white shadow-lg rounded-lg p-6 max-w-lg w-full bg-opacity-90">
         <h2 class="text-2xl font-bold text-center text-blue-900">Évaluation de la Formation</h2>
         <p class="text-center text-gray-600 mb-4">Merci de prendre quelques instants pour donner votre avis.</p>
 
@@ -61,29 +68,6 @@
             <div>
                 <label class="block text-sm font-semibold text-gray-700">Qualité des supports de cours :</label>
                 <select name="course_materials" class="w-full border border-gray-300 p-3 rounded-lg bg-gray-100 focus:outline-blue-500 focus:ring-2 focus:ring-blue-500">
-                    <option>1 - Pas du tout satisfaisant</option>
-                    <option>2 - Peu satisfaisant</option>
-                    <option>3 - Moyennement satisfaisant</option>
-                    <option>4 - Satisfaisant</option>
-                    <option>5 - Très satisfaisant</option>
-                </select>
-            </div>
-
-            <!-- Contenu des enseignements -->
-            <h3 class="text-lg font-semibold text-gray-700">Contenu des enseignements</h3>
-            <div>
-                <label class="block text-sm font-semibold text-gray-700">Objectifs du cours clairement énoncés :</label>
-                <select name="course_objectives" class="w-full border border-gray-300 p-3 rounded-lg bg-gray-100 focus:outline-blue-500 focus:ring-2 focus:ring-blue-500">
-                    <option>1 - Pas du tout satisfaisant</option>
-                    <option>2 - Peu satisfaisant</option>
-                    <option>3 - Moyennement satisfaisant</option>
-                    <option>4 - Satisfaisant</option>
-                    <option>5 - Très satisfaisant</option>
-                </select>
-            </div>
-            <div>
-                <label class="block text-sm font-semibold text-gray-700">Contenu en adéquation avec les objectifs :</label>
-                <select name="content_relevance" class="w-full border border-gray-300 p-3 rounded-lg bg-gray-100 focus:outline-blue-500 focus:ring-2 focus:ring-blue-500">
                     <option>1 - Pas du tout satisfaisant</option>
                     <option>2 - Peu satisfaisant</option>
                     <option>3 - Moyennement satisfaisant</option>
