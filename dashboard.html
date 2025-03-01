@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="flex">
+        <!-- Menu de navigation -->
+        <nav class="w-64 bg-blue-900 text-white min-h-screen p-4">
+            <h1 class="text-xl font-bold mb-4">InnovAQ</h1>
+            <ul>
+                <li class="mb-2"><a href="#" class="block p-2 hover:bg-blue-700">Dashboard</a></li>
+                <li class="mb-2"><a href="#" class="block p-2 hover:bg-blue-700">Accréditations</a></li>
+                <li class="mb-2"><a href="#" class="block p-2 hover:bg-blue-700">Qualité académique</a></li>
+                <li class="mb-2"><a href="#" class="block p-2 hover:bg-blue-700">Plans d’action</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Contenu principal -->
+        <main class="flex-1 p-6">
+            <h2 class="text-2xl font-semibold mb-6">Tableau de Bord</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Graphique suivi des accréditations -->
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h3 class="text-lg font-semibold mb-2">Suivi des Accréditations</h3>
+                    <canvas id="chartAccreditations"></canvas>
+                </div>
+                
+                <!-- Graphique évolution qualité académique -->
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h3 class="text-lg font-semibold mb-2">Évolution de la Qualité Académique</h3>
+                    <canvas id="chartQualite"></canvas>
+                </div>
+                
+                <!-- Indicateur progrès plans d’action -->
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h3 class="text-lg font-semibold mb-2">Progrès des Plans d’Action</h3>
+                    <canvas id="chartPlans"></canvas>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Données factices pour les graphiques
+        const ctxAccreditations = document.getElementById('chartAccreditations').getContext('2d');
+        new Chart(ctxAccreditations, {
+            type: 'bar',
+            data: {
+                labels: ['2021', '2022', '2023', '2024'],
+                datasets: [{
+                    label: 'Accréditations obtenues',
+                    data: [5, 10, 15, 20],
+                    backgroundColor: 'rgba(54, 162, 235, 0.5)'
+                }]
+            }
+        });
+        
+        const ctxQualite = document.getElementById('chartQualite').getContext('2d');
+        new Chart(ctxQualite, {
+            type: 'line',
+            data: {
+                labels: ['2021', '2022', '2023', '2024'],
+                datasets: [{
+                    label: 'Score Qualité',
+                    data: [70, 75, 80, 85],
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    fill: false
+                }]
+            }
+        });
+        
+        const ctxPlans = document.getElementById('chartPlans').getContext('2d');
+        new Chart(ctxPlans, {
+            type: 'doughnut',
+            data: {
+                labels: ['Complété', 'En cours', 'À faire'],
+                datasets: [{
+                    data: [50, 30, 20],
+                    backgroundColor: ['#4CAF50', '#FF9800', '#F44336']
+                }]
+            }
+        });
+    </script>
+</body>
+</html>
