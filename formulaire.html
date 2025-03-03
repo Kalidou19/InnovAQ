@@ -5,68 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire d'évaluation des enseignements</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-image: url('https://source.unsplash.com/1600x900/?education,learning');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .form-container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <div class="bg-white shadow-lg rounded-lg p-6 max-w-2xl w-full">
-        <h2 class="text-2xl font-bold text-center text-blue-900">Formulaire d'évaluation des enseignements</h2>
-        <p class="text-center text-gray-600 mb-4">Merci de remplir ce formulaire pour donner votre avis.</p>
-
+<body class="flex items-center justify-center min-h-screen">
+    <div class="form-container max-w-2xl w-full">
+        <h2 class="text-2xl font-bold text-center text-blue-900">Évaluation des Enseignements</h2>
+        <p class="text-center text-gray-600 mb-4">Votre retour est essentiel pour l'amélioration continue de nos formations.</p>
+        
         <form action="#" method="POST" class="space-y-4">
             <!-- Informations générales -->
             <div>
-                <label class="block text-sm font-semibold text-gray-700">Prénom(s) & Nom de l’étudiant (facultatif) :</label>
-                <input type="text" name="student_name" class="w-full border border-gray-300 p-3 rounded-lg">
-            </div>
-            <div class="grid grid-cols-2 gap-4">
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700">Département :</label>
-                    <input type="text" name="department" class="w-full border border-gray-300 p-3 rounded-lg">
-                </div>
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700">Classe :</label>
-                    <input type="text" name="class" class="w-full border border-gray-300 p-3 rounded-lg">
-                </div>
+                <label class="block text-sm font-semibold text-gray-700">Nom du cours :</label>
+                <input type="text" name="course_name" class="w-full border border-gray-300 p-3 rounded-lg" required>
             </div>
             <div>
-                <label class="block text-sm font-semibold text-gray-700">Intitulé du module :</label>
-                <input type="text" name="module_title" class="w-full border border-gray-300 p-3 rounded-lg">
-            </div>
-            <div>
-                <label class="block text-sm font-semibold text-gray-700">Semestre :</label>
-                <input type="text" name="semester" class="w-full border border-gray-300 p-3 rounded-lg">
-            </div>
-            <div class="grid grid-cols-2 gap-4">
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700">Professeur :</label>
-                    <input type="text" name="professor" class="w-full border border-gray-300 p-3 rounded-lg">
-                </div>
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700">Volume horaire :</label>
-                    <input type="text" name="hours" class="w-full border border-gray-300 p-3 rounded-lg">
-                </div>
+                <label class="block text-sm font-semibold text-gray-700">Nom de l'enseignant :</label>
+                <input type="text" name="teacher" class="w-full border border-gray-300 p-3 rounded-lg" required>
             </div>
             
-            <!-- Évaluation -->
-            <h3 class="text-lg font-semibold text-gray-700">Évaluation du cours</h3>
-            <p class="text-sm text-gray-600">Légende : 1 = Pas du tout satisfaisant, 2 = Peu satisfaisant, 3 = Moyennement satisfaisant, 4 = Satisfaisant, 5 = Très satisfaisant</p>
+            <!-- Évaluation avec notation -->
+            <h3 class="text-lg font-semibold text-gray-700">Critères d'évaluation</h3>
+            <p class="text-sm text-gray-600">1 = Pas du tout satisfaisant, 5 = Très satisfaisant</p>
             
             <div class="space-y-4">
-                <label class="block text-sm font-semibold text-gray-700">Programmation du cours :</label>
-                <select name="course_schedule" class="w-full border border-gray-300 p-3 rounded-lg">
+                <label class="block text-sm font-semibold text-gray-700">Qualité du contenu pédagogique :</label>
+                <select name="content_quality" class="w-full border border-gray-300 p-3 rounded-lg">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
                     <option>5</option>
                 </select>
-                <label class="block text-sm font-semibold text-gray-700">Organisation logistique (salle, matériel) :</label>
-                <select name="logistics" class="w-full border border-gray-300 p-3 rounded-lg">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
+                
                 <label class="block text-sm font-semibold text-gray-700">Méthodes pédagogiques utilisées :</label>
                 <select name="teaching_methods" class="w-full border border-gray-300 p-3 rounded-lg">
                     <option>1</option>
@@ -75,8 +58,9 @@
                     <option>4</option>
                     <option>5</option>
                 </select>
-                <label class="block text-sm font-semibold text-gray-700">Structuration et maîtrise des thèmes développés :</label>
-                <select name="content_structure" class="w-full border border-gray-300 p-3 rounded-lg">
+                
+                <label class="block text-sm font-semibold text-gray-700">Engagement de l'enseignant et interactions :</label>
+                <select name="teacher_engagement" class="w-full border border-gray-300 p-3 rounded-lg">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -85,7 +69,7 @@
                 </select>
             </div>
             
-            <!-- Avis & Commentaires -->
+            <!-- Avis et suggestions -->
             <h3 class="text-lg font-semibold text-gray-700">Avis & Commentaires</h3>
             <div>
                 <label class="block text-sm font-semibold text-gray-700">Ce que vous avez le plus apprécié :</label>
@@ -99,7 +83,7 @@
                 <label class="block text-sm font-semibold text-gray-700">Suggestions d’amélioration :</label>
                 <textarea name="suggestions" class="w-full border border-gray-300 p-3 rounded-lg"></textarea>
             </div>
-
+            
             <!-- Bouton de soumission -->
             <div class="text-center">
                 <button type="submit" class="bg-blue-900 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all duration-300">
